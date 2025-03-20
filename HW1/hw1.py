@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 N = 19
 k = (N - 1) // 2
@@ -13,6 +14,21 @@ delta = 0.0001
 d = 0.00001
 r = 5
 D = 50001
+
+def initial_F():
+    interval1 = (0, (fstop - bw) / fs)
+    interval2 = ((fstop + bw) / fs, 0.5)
+
+    n1 = random.randint(1, k + 1)
+    n2 = k + 2 - n1
+
+    iniF1 = [round(random.uniform(interval1[0], interval1[1]), r) for _ in range(n1)]
+    iniF2 = [round(random.uniform(interval2[0], interval2[1]), r) for _ in range(n2)]
+
+    iniF = iniF1 + iniF2
+    iniF.sort(key=lambda x: x)
+
+    return iniF
 
 def w(_F):
     if _F >= 0 and _F <= (fstop - bw) / fs:
@@ -74,7 +90,8 @@ def choose_F(_err):
 
 if "__main__" == __name__:
     s = np.zeros(k + 2)
-    F = [0, 0.05, 0.1, 0.15, 0.2, 0.24, 0.31, 0.35, 0.4, 0.45, 0.5]
+    # F = [0, 0.05, 0.1, 0.15, 0.2, 0.24, 0.31, 0.35, 0.4, 0.45, 0.5]
+    F = initial_F()
     E = []
 
     prevE = np.inf
@@ -117,7 +134,7 @@ if "__main__" == __name__:
 
     plt.figure(figsize=(10, 6))
     plt.stem(range(len(h)), h, linefmt='magenta', markerfmt='o', basefmt='black')
-    plt.title("Impulse Response ")
+    plt.title("Impulse Response")
     plt.xlabel("n")
     plt.ylabel("$h[n]$")
     plt.xticks(np.arange(len(h)))
