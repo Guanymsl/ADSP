@@ -112,11 +112,14 @@ if "__main__" == __name__:
     plt.title("Maximal Error")
     plt.xlabel("Iteration")
     plt.ylabel("$E_0$")
+    plt.xticks(np.arange(len(E)))
+    plt.grid(True)
 
     plt.figure(figsize=(10, 6))
     plt.stem(range(len(h)), h, linefmt='magenta', markerfmt='o', basefmt='black')
     plt.title("Impulse Response ")
     plt.xlabel("n")
     plt.ylabel("$h[n]$")
+    plt.xticks(np.arange(len(h)))
 
     plt.show()
