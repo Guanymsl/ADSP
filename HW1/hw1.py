@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-N = 51
+N = 19
 k = (N - 1) // 2
 
 fs = 8000.0
