@@ -27,14 +27,14 @@ if __name__ == "__main__":
 
     plt.figure(figsize=(10, 6))
     plt.stem(range(len(h)), h, linefmt='magenta', markerfmt='o', basefmt='black')
-    plt.title("Impulse Response")
+    plt.title("Impulse Response for $N$ = {}".format(N))
     plt.xlabel("n")
     plt.ylabel("$h[n]$")
     plt.xticks(np.arange(len(h)))
 
     plt.figure(figsize=(10, 6))
     plt.plot(w / (2 * np.pi), RF.imag, color='orange')
-    plt.title("Imaginary Part of Frequency Response")
+    plt.title("Imaginary Part of Frequency Response for $N$ = {}".format(N))
     plt.xlabel("Normalized Frequency")
     plt.ylabel("Amplitude")
     plt.grid(True)
