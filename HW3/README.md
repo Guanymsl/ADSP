@@ -11,7 +11,7 @@ pip3 install -r requirements.txt
 ## Usage
 
 ```bash
-python getmusic.py \
+python3 getmusic.py \
     --score <note1> <note2> ...    \
     --beat  <beat1> <beat2> ...    \
     --name  <output-name>          \
@@ -58,7 +58,7 @@ python getmusic.py \
 **“Twinkle Twinkle Little Star”**
 
 ```bash
-python getmusic.py \
+python3 getmusic.py \
     --score 1 1 5 5 6 6 5 4 4 3 3 2 2 1 \
     --beat  1 1 1 1 1 1 2 1 1 1 1 1 1 2 \
     --name  twinkle \
