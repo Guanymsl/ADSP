@@ -24,7 +24,7 @@ python getmusic.py \
 ```
 
 * `--score`
-  A sequence of integers (1–7) representing scale degrees; use `0` for rest.
+  A sequence of integers (1–7) representing scale degrees; use `0` for rest.  
   **Example:** `--score 1 1 5 5 6 6 5`
 * `--beat`
   A sequence of floats/ints (same length as `--score`) indicating each note’s duration in quarter-note units.
@@ -38,7 +38,7 @@ python getmusic.py \
 * `--key` *(optional)*
   Musical key, one of `C, C#, D, D#, E, F, F#, G, G#, A, A#, B`.
   **Default:** `C`
-* `--pitch` *(optional)*
+* `--octave` *(optional)*
   Octave number (1–7).
   **Default:** `4`
 * `--mode` *(optional)*
@@ -57,14 +57,14 @@ python getmusic.py \
 
 **“Twinkle Twinkle Little Star”**
 
-   ```bash
-   python getmusic.py \
-     --score 1 1 5 5 6 6 5 4 4 3 3 2 2 1 \
-     --beat  1 1 1 1 1 1 2 1 1 1 1 1 1 2 \
-     --name  twinkle \
-     --bpm   100
-   ```
+```bash
+python getmusic.py \
+    --score 1 1 5 5 6 6 5 4 4 3 3 2 2 1 \
+    --beat  1 1 1 1 1 1 2 1 1 1 1 1 1 2 \
+    --name  twinkle \
+    --bpm   100
+```
 
-   Generates `./results/twinkle.wav` at 100 BPM.
+Generates `./results/twinkle.wav` at 100 BPM.
 
 ---
