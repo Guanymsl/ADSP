@@ -27,28 +27,28 @@ python getmusic.py \
   A sequence of integers (1–7) representing scale degrees; use `0` for rest.  
   **Example:** `--score 1 1 5 5 6 6 5`
 * `--beat`
-  A sequence of floats/ints (same length as `--score`) indicating each note’s duration in quarter-note units.
+  A sequence of floats/ints (same length as `--score`) indicating each note’s duration in quarter-note units.  
   **Example:** `--beat 1 1 1 1 1 1 2`
 * `--name`
-  Output filename (without `.wav`), saved to `./results/<name>.wav`.
+  Output filename (without `.wav`), saved to `./results/<name>.wav`.  
   **Default:** `"default"`
 * `--bpm` *(optional)*
-  Tempo in beats per minute.
+  Tempo in beats per minute.  
   **Default:** `120.0`
 * `--key` *(optional)*
-  Musical key, one of `C, C#, D, D#, E, F, F#, G, G#, A, A#, B`.
+  Musical key, one of `C, C#, D, D#, E, F, F#, G, G#, A, A#, B`.  
   **Default:** `C`
 * `--octave` *(optional)*
-  Octave number (1–7).
+  Octave number (1–7).  
   **Default:** `4`
 * `--mode` *(optional)*
-  Scale mode, one of `Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian`.
+  Scale mode, one of `Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian`.  
   **Default:** `Ionian`
 * `--volume` *(optional)*
-  Volume level (0.0–1.0).
+  Volume level (0.0–1.0).  
   **Default:** `1.0`
 * `--standard` *(optional)*
-  Reference frequency for C4 in Hz.
+  Reference frequency for C4 in Hz.  
   **Default:** `261.63`
 
 ---
