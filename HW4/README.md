@@ -13,6 +13,6 @@ pip3 install -r requirements.txt
 1. Put the input image in `data/`
 2. Change the file name in `hw4.py`
 3. ```bash
-   python hw4.py
+   python3 hw4.py
    ```
 4. The result will be in `result/`

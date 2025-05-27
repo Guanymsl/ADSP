@@ -39,7 +39,7 @@ if __name__ == "__main__":
     combined = np.hstack((img, comp))
 
     h, w = combined.shape[:2]
-    text = f"Original | PSNR = {psnr:.2f} dB | Compressed"
+    text = f"Original | PSNR = {psnr:.2f} dB | Reconstructed"
 
     font = cv2.FONT_HERSHEY_COMPLEX
 
