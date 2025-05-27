@@ -40,11 +40,12 @@ if __name__ == "__main__":
 
     h, w = combined.shape[:2]
     text = f"Original | PSNR = {psnr:.2f} dB | Reconstructed"
+    print(f"PSNR = {psnr:.2f} dB")
 
     font = cv2.FONT_HERSHEY_COMPLEX
 
     (text_w0, text_h0), baseline0 = cv2.getTextSize(text, font, 1, 1)
-    font_scale = (w * 0.3) / text_w0
+    font_scale = max((w * 0.3) / text_w0, 0.3)
 
     thickness = max(1, int(h / 300))
 
